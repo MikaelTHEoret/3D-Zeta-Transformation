@@ -1,0 +1,52 @@
+{
+  "name": "3d-zeta-transformation",
+  "version": "1.0.0",
+  "description": "Revolutionary 3D visualization of Riemann Zeta Function toroidal folding",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next build && next export"
+  },
+  "dependencies": {
+    "@types/node": "20.5.0",
+    "@types/react": "18.2.20",
+    "@types/react-dom": "18.2.7",
+    "@types/three": "^0.152.1",
+    "eslint": "8.47.0",
+    "eslint-config-next": "13.4.19",
+    "mathjs": "^11.9.1",
+    "next": "13.4.19",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "three": "^0.152.2",
+    "@react-three/fiber": "^8.13.0",
+    "@react-three/drei": "^9.77.0",
+    "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "@types/mathjs": "^9.4.2",
+    "tailwindcss": "^3.3.3",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.27"
+  },
+  "keywords": [
+    "riemann-zeta-function",
+    "3d-visualization",
+    "mathematical-consciousness",
+    "toroidal-geometry",
+    "electromagnetic-fields",
+    "number-theory",
+    "three.js",
+    "next.js"
+  ],
+  "author": "Mikael Theoret",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MikaelTHEoret/3D-Zeta-Transformation.git"
+  },
+  "homepage": "https://mikaeltheoret.github.io/3D-Zeta-Transformation/"
+}
