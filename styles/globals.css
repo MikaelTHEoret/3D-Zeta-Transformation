@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Mathematical Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --zeta-blue: #1e40af;
+  --torus-gold: #f59e0b;
+  --field-purple: #7c3aed;
+  --consciousness-cyan: #06b6d4;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(135deg, #0f172a 0%, #581c87 50%, #0f172a 100%);
+}
+
+/* Mathematical notation styling */
+.math-notation {
+  font-family: 'Fira Code', monospace;
+  font-weight: 400;
+}
+
+/* 3D Canvas container */
+.canvas-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Loading animations */
+@keyframes pulse-zeta {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes rotate-torus {
+  from {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  to {
+    transform: rotateY(360deg) rotateX(360deg);
+  }
+}
+
+@keyframes transform-2d-3d {
+  0% {
+    transform: perspective(1000px) rotateX(0deg);
+  }
+  50% {
+    transform: perspective(1000px) rotateX(45deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateX(0deg) rotateY(180deg);
+  }
+}
+
+.pulse-zeta {
+  animation: pulse-zeta 2s ease-in-out infinite;
+}
+
+.rotate-torus {
+  animation: rotate-torus 20s linear infinite;
+}
+
+.transform-2d-3d {
+  animation: transform-2d-3d 5s ease-in-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(124, 58, 237, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(124, 58, 237, 0.7);
+}
+
+/* Mathematical equations */
+.equation {
+  font-family: 'Fira Code', monospace;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--zeta-blue);
+  overflow-x: auto;
+}
+
+/* Control panel styling */
+.control-section {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+}
+
+.control-section:last-child {
+  border-bottom: none;
+}
+
+/* Interactive elements */
+.interactive-button {
+  @apply px-4 py-2 rounded-lg transition-all duration-200 font-medium;
+}
+
+.interactive-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.slider {
+  @apply w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer;
+}
+
+.slider::-webkit-slider-thumb {
+  @apply appearance-none w-4 h-4 bg-torus-gold rounded-full cursor-pointer;
+}
+
+.slider::-moz-range-thumb {
+  @apply w-4 h-4 bg-torus-gold rounded-full cursor-pointer border-none;
+}
+
+/* Educational overlay */
+.educational-overlay {
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Mathematical symbols */
+.zeta-symbol {
+  font-size: 1.5em;
+  color: var(--zeta-blue);
+  font-weight: bold;
+}
+
+.phi-symbol {
+  font-size: 1.2em;
+  color: var(--torus-gold);
+  font-weight: bold;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .canvas-container {
+    height: 60vh;
+  }
+  
+  .control-panel {
+    height: 40vh;
+    overflow-y: auto;
+  }
+}
+
+/* Dark mode optimizations */
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
